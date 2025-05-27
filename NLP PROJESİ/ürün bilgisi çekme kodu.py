@@ -179,10 +179,10 @@ ayarlar.add_argument("--disable-notifications")
 ayarlar.add_experimental_option("excludeSwitches", ["enable-logging"])
 surucu = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=ayarlar)
 
-with open("deneme50.txt", "r", encoding="utf-8") as f:
+with open("urun_linkleri.txt", "r", encoding="utf-8") as f:
     urun_linkleri = [satir.strip() for satir in f if satir.strip()]
 
-with open("urunler51.csv", "w", newline='', encoding="utf-8") as dosya:
+with open("urunler.csv", "w", newline='', encoding="utf-8") as dosya:
     yazici = csv.writer(dosya)
     yazici.writerow([
         "urun_id", "urun_adi", "fiyat", "foto_link",
